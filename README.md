@@ -10,7 +10,7 @@ Since web browsers cannot directly access local USB or Network devices due to se
 -    **Posnet/Fisver Integration:** Native integration with Fiserv/Posnet pinpads integration (only devices for Argentina).
 -    **Clover Integration:** Native integration with Clover devices (with *Network Pay Display*).
 - **EPSON & Hasar fiscal printers integration:** Native integration with EPSON and Hasar 2nd generation fiscal printers.
--   **Minimalist GUI:** A simple Swing-based status window indicating server health and port activity (*against my professors' recommendation to use Swing, sorry professors Alejandro Peña & Adrian Narducci 😅*).
+-   **Minimalist GUI:** A simple Swing-based status window indicating server health and port activity (*against my professors' recommendation to not use Swing, sorry professors Alejandro Peña & Adrian Narducci 😅*).
 -   **Single-File Deployment:** Compiles into a single "Fat JAR" with all dependencies included for easy distribution.
 
 ## 📂 Project Architecture
@@ -95,4 +95,4 @@ To print a ticket from the web client, send a `POST` request to the local connec
     }
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/marcoss2009/Bread-Artisans-Connector/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/marcoss2009/Bread-Artisans-Connector/blob/master/LICENSE) file for details.

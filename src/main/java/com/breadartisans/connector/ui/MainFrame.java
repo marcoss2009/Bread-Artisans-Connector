@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class MainFrame extends JFrame {
+    private JLabel breadArtisans;
     private JLabel statusLabel;
     private JLabel printerLabel;
     private JLabel protocolLabel;
@@ -16,7 +17,7 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         super("Bread Artisans Connector");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 280);
+        setSize(500, 320);
         setLocationRelativeTo(null); // Center the frame on screen
         setLayout(new BorderLayout());
 
@@ -25,16 +26,29 @@ public class MainFrame extends JFrame {
     }
 
     private void initComponents() {
+        // Settings data
+        JPanel headerPanel = new JPanel(new GridLayout(4, 2, 5, 5));
+        headerPanel.setBorder(new EmptyBorder(10, 10, 0, 10));
+
+        // Bread Artisans logo
+        breadArtisans = new JLabel("Bread Artisans", SwingConstants.CENTER);
+        breadArtisans.setFont(new Font("Open Sans", Font.BOLD, 24));
+        //breadArtisans.setBorder(new EmptyBorder(10, 10, 10, 10));
+        breadArtisans.setOpaque(true);
+        headerPanel.add(breadArtisans);
+
         // Server status
         statusLabel = new JLabel("Iniciando servicios...", SwingConstants.CENTER);
         statusLabel.setFont(new Font("Open Sans", Font.BOLD, 18));
-        statusLabel.setBorder(new EmptyBorder(20, 10, 20, 10));
+        //statusLabel.setBorder(new EmptyBorder(20, 10, 20, 10));
         statusLabel.setOpaque(true);
-        add(statusLabel, BorderLayout.NORTH);
+        headerPanel.add(statusLabel);
+
+        add(headerPanel, BorderLayout.NORTH);
 
         // Settings data
         JPanel infoPanel = new JPanel(new GridLayout(4, 2, 5, 5));
-        infoPanel.setBorder(new EmptyBorder(10, 40, 10, 40));
+        infoPanel.setBorder(new EmptyBorder(0, 40, 10, 40));
 
         // Port
         infoPanel.add(new JLabel("Puerto del Servidor:"));
